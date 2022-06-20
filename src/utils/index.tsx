@@ -1,0 +1,1 @@
+export {apiTmdb} from './axios';
