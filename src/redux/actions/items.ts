@@ -30,7 +30,7 @@ export const processItems = ({ page, search }: ProcessItems)=> {
             
             } 
             else {
-                response = await apiTmdb.get(`/movie/top_rated?page=${page}`);
+                response = await apiTmdb.get(`/discover/movie?page=${page}`);
                 dispatch(okItems (response.data))
             }
         }

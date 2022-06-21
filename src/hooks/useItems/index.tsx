@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { processItems } from "../../redux/actions/items";
 
-import { Item, TotalResults } from "../../types";
+import { TotalResults } from "../../types";
 
 type ItemsStore={
     items:{

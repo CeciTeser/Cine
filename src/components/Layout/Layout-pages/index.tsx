@@ -4,6 +4,7 @@ import { Main } from '../Main';
 
 type Props={
     page?:string,
+    children: React.ReactNode,
 
 }
 const Layout:FC < Props >= ({children , page})=> {

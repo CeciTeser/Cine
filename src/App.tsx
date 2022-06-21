@@ -2,7 +2,7 @@
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 import Dashboard from './pages/Dashboard';
 
@@ -18,11 +18,11 @@ function App() {
 
     <Router>
 
-      <Switch>
+      <Routes>
 
-        <Route path="/" component={Dashboard}/>
+        <Route path="/" element={<Dashboard />}/>
         
-      </Switch>
+      </Routes>
 
     </Router>
 
