@@ -1,6 +1,8 @@
 import { FC } from 'react';
 
 import { Layout } from '../../components';
+import { Footer } from '../../components/Common/Footer';
+import { Header } from '../../components/Common/Header';
 import { ItemsList } from '../../components/Layout';
 import { Search } from '../../components/Layout/Search';
 
@@ -14,8 +16,10 @@ const Dashboard:FC =()=>{
 
     return (  
         <Layout page ='Dashboard'>
-              <Search/>
-              <ItemsList items={data.results}/>
+            <Header/>
+            <Search/>
+            <ItemsList items={data.results}/>
+            <Footer/>
         </Layout>
     )
 }
