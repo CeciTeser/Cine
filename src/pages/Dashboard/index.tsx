@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Layout } from '../../components';
-import { Footer } from '../../components/Common/Footer';
+import { Footer } from '../../components/Common';
 import { Header } from '../../components/Common/Header';
 import { ItemsList } from '../../components/Layout';
 import { Search } from '../../components/Layout/Search';

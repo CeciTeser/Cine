@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { processItems } from "../../redux/actions/items";
 
-import { TotalResults } from "../../types";
+import { Item, TotalResults } from "../../types";
 
 type ItemsStore={
     items:{
@@ -13,6 +13,13 @@ type ItemsStore={
     }
 };
 
+type ItemsDetailStore = {
+    itemDetail: {
+        items: Item[];
+        loading?: boolean;
+        error?: string;
+    };
+};
 
 
 const useItems = () =>{
@@ -25,6 +32,8 @@ const useItems = () =>{
 
     const {data} = useSelector((state:ItemsStore)=> state.items)
 
+    const itemDetail = useSelector((state:ItemsDetailStore)=> state.itemDetail)
+
 
     useEffect (()=>{
         dispatch(processItems({ page, search }))
@@ -33,7 +42,7 @@ const useItems = () =>{
 
 
 
-    return { data, page, setPage, search, setSearch}
+    return { data, page, setPage, search, setSearch, itemDetail}
 
 }
 
