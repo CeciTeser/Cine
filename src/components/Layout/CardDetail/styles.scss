@@ -1,0 +1,40 @@
+@import '../../../scss/main.scss';
+
+.card{
+    border:none;
+    font-family: 'Barlow', sans-serif;
+
+    .vote{
+        color: red; 
+    }
+
+    h3{
+        font-size: 1.5rem;
+        padding-bottom:1rem;
+    }
+
+}
+
+h2{
+    font-size: 1.5rem;
+    padding-bottom:1rem;
+    font-family: 'Barlow', sans-serif;
+}
+.each-card{
+    border-right: 1px solid rgb(220, 219, 219);
+}
+
+.goback-btn{
+    width: 8rem;
+    height: 2rem;
+    background-color: white;
+    border: 1px solid red;
+    
+    
+}
+
+.goback-btn:hover{
+    background-color: red;
+    color: white;
+    border: none;
+}
