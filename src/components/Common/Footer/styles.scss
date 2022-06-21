@@ -1,0 +1,69 @@
+@import '../../../scss/main.scss';
+
+.footer{
+   
+    border-bottom: 1px solid rgb(200, 200, 202); 
+    margin-bottom: 5rem;
+  
+
+    .up-row {
+        width: 50%;
+
+        ul{
+            width: 100%;
+            list-style: none;
+            font-family: 'Barlow', sans-serif;
+            display: flex;
+            flex-direction: row;
+    
+    
+            a{
+                border: none;
+                text-decoration: none;
+                font-weight: bold;
+                color: black;
+                background-color: transparent;
+                font-size: 1rem;
+                letter-spacing: 1px;
+               
+            }
+    
+            a:hover{
+                background-color:  rgb(224, 44, 44);
+                color: $third-color;
+                font-weight: 600;
+            }
+        }
+   
+    }
+
+    .down-row {
+        width: 50%;
+
+        ul{
+            width: 100%;
+            list-style: none;
+            font-family: 'Barlow', sans-serif;
+            display: flex;
+            flex-direction: row;
+    
+    
+            a{
+                border: none;
+                text-decoration: none;
+                color: rgb(126, 126, 130);
+                background-color: transparent;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+               
+            }
+    
+            a:hover{
+                color: $third-color;
+                font-weight: 600;
+            }
+        }
+    }
+
+
+}
