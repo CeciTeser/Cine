@@ -6,7 +6,9 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { StarRating } from "../../StarRaiting";
 
+
 import './styles.scss';
+
 
 
 
@@ -15,7 +17,7 @@ type Props={
        
 }
 
-const ItemsList :FC<Props> = ({items}) =>{
+const Movies :FC<Props> = ({items}) =>{
 
     const navegate = useNavigate()
 
@@ -23,9 +25,8 @@ const ItemsList :FC<Props> = ({items}) =>{
     return(
       
         <div className="container">
-            <div className="d-flex flex-row justify-content-between align-items-center " >
-                <h2>POPULAR MOVIES</h2>
-                <Link className= "" to={`/movies`}>VIEW ALL</Link>
+             <div className="" >
+                <Link className= "" to={`/`}>Home</Link>
             </div>
             <div className="row">
                     {items && items?.map((item) => {                       
@@ -52,4 +53,4 @@ const ItemsList :FC<Props> = ({items}) =>{
     )
 }   
 
-export {ItemsList}
+export {Movies}

@@ -18,6 +18,7 @@ const Dashboard:FC =()=>{
         <Layout page ='Dashboard'>
             <Header/>
             <ItemsList items={data.results}/>
+            <Footer/>
         </Layout>
     )
 }
