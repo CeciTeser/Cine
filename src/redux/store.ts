@@ -3,7 +3,7 @@ import { createStore, combineReducers, applyMiddleware, compose  } from 'redux';
 import thunk from 'redux-thunk';
 import { itemsReducer } from './reducers/items';
 import { itemByIdReducer } from './reducers/itemById';
-import { videosReducer } from './reducers/videos';
+
 
 
 
@@ -21,8 +21,6 @@ const composeEnhancers =
 const reducers = combineReducers({
     items: itemsReducer,
     itemById: itemByIdReducer,
-    video: videosReducer,
-
 })
 
 export const store = createStore(reducers, 

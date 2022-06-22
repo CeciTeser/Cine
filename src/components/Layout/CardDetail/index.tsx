@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { StarRating } from "../../StarRaiting";
 
-import { useVideos } from "../../../hooks";
-
+import { useItemSelect } from "../../../hooks";
 
 
 
@@ -17,7 +16,7 @@ const CardDetail :FC = () =>{
 
     const navegate = useNavigate()
 
-    const {data, videoList } = useVideos()
+    const { data } = useItemSelect()
 
     const imageBroken = (!data.poster_path)? "https://i.stack.imgur.com/6M513.png" : `http://image.tmdb.org/t/p/w500${data.poster_path}`
 
@@ -43,24 +42,6 @@ const CardDetail :FC = () =>{
                             <p className="card-text">{data.overview}</p>
                             <p className="card-text"> <strong>Release date:</strong> {data.release_date}</p>
                             <p className="card-text"> <strong>Original language:</strong> {data.original_language}</p>
-                            <section  className="pt-5 row">
-                                <h3>Trailers</h3>
-                                {videoList.data?.map((video:any) => {
-
-                                    return (
-                                        <div className='col-md-6 mb-3'>
-                                            <iframe
-                                            title={video.name}
-                                            width="300"
-                                            height="200"
-                                            src={`https://www.youtube.com/embed/${video.key}`}
-                                            allowFullScreen
-                                            >
-                                            </iframe>
-                                        </div>
-                                    );
-                                })}
-                            </section>
                         </div>
                     </div>
                 </div>

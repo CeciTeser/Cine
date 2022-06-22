@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import { processItemById } from "../../redux/actions/itemById";
-import { processVideos } from "../../redux/actions/videos";
 
-import { Item, Video } from "../../types";
+
+import { Item } from "../../types";
 
 type ItembyIdStore={
     itemById:{
@@ -15,20 +15,10 @@ type ItembyIdStore={
      }
  };
  
- type VideosStore = {
-     video: {
-         data: Video[];
-         loading?: boolean;
-         error?: string;
-     };
- };
 
- const useVideos =()=>{
+ const useItemSelect =()=>{
  
     const {data} = useSelector((state:ItembyIdStore)=> state.itemById)
-
-    const videoList = useSelector((state:VideosStore)=> state.video)
-
 
     const {idItem} = useParams<{idItem:string}>()
 
@@ -41,13 +31,7 @@ type ItembyIdStore={
     },[dispatch, idItem])
 
 
-    useEffect (()=>{
-
-        dispatch(processVideos(data.id))
-        
-    },[dispatch, data.id])
-
-    return {data , videoList ,  idItem }
+    return {data , idItem }
 
 }
-export {useVideos}
+export {useItemSelect}
