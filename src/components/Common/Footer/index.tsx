@@ -1,5 +1,7 @@
 import { FC } from "react"
 
+import { FaRegistered } from 'react-icons/fa'
+
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
@@ -10,15 +12,15 @@ const Footer: FC = () => {
    
     return (
     
-        <div className="container-fluid">
+        <div className="container container-style">
 
-            <div className="footer" >
+            <div className="footer">
 
                     <div className="up-row d-flex flex-row justify-content-between">
 
                         <div>
 
-                            <ul>
+                            <ul className="d-flex flex-row">
 
                                 <li className="nav-item">
                         
@@ -52,10 +54,11 @@ const Footer: FC = () => {
                                 
                             </ul>
                         </div>
+                     
 
-                          <div>
-
-                            <ul>
+                        
+                        <div>
+                            <ul className="d-flex flex-row me-3">
 
                                 <li className="nav-item">
                         
@@ -76,9 +79,9 @@ const Footer: FC = () => {
 
                     <div className="down-row ps-2 d-flex flex-row justify-content-between">
 
-                        <div className="ps-2">
+                        <div>
 
-                            <ul>
+                            <ul className="d-flex flex-row">
 
                                 <li className="nav-item">
                         
@@ -108,7 +111,7 @@ const Footer: FC = () => {
 
                                 <li className="nav-item">
                         
-                                    <Link className= "nav-link"  to= {``}> 2007-2014 MovieRountable</Link>
+                                    <Link className= "nav-link"  to= {``}> <FaRegistered/> 2007-2014 MovieRountable</Link>
                                 
                                 </li>
                             
