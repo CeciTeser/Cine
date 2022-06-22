@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import { LoginPage } from './pages/LoginPage';
 import { SignUpPage } from './pages/SignUpPage';
 import CardDetailPage from './pages/CardDetailPage';
+import Movies from './pages/MoviesPage';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/detail/:idItem" element={<CardDetailPage />}/>
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/signup" element={<SignUpPage />}/>
+        <Route path="/movies" element={<Movies/>}/>
         
       </Routes>
 
