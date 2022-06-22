@@ -12,9 +12,7 @@ const Footer: FC = () => {
     
         <div className="container-fluid">
 
-            <div className="footer">
-
-                <div className="d-flex flex-column align-items-center">
+            <div className="footer" >
 
                     <div className="up-row d-flex flex-row justify-content-between">
 
@@ -76,9 +74,9 @@ const Footer: FC = () => {
 
                     </div>
 
-                    <div className="down-row d-flex flex-row justify-content-between">
+                    <div className="down-row ps-2 d-flex flex-row justify-content-between">
 
-                        <div>
+                        <div className="ps-2">
 
                             <ul>
 
@@ -118,7 +116,6 @@ const Footer: FC = () => {
 
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 

@@ -14,25 +14,19 @@ const Nav: FC = () => {
 
             <div className="container-fluid">
 
-            <Link className="navbar-brand ps-3"to="/">  </Link>
-
-            <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <span className="navbar-toggler-icon"></span>
-            </button>
-
-                <div className="collapse navbar-collapse flex-grow-0 me-4" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
              
-                    <ul className="navbar-nav mb-2 mb-lg-0">
+                    <ul className="navbar-nav">
 
                         <li className="nav-item">
                 
-                            <Link className= "nav-link" to={`/login`}>Login</Link>
+                            <Link className= "nav-link me-5" to={`/login`}>Login</Link>
                         
                         </li>
                         
                         <li className="nav-item">
 
-                            <Link className= "nav-link" to={`/signup`} >Sign Up</Link>
+                            <Link className= "nav-link " to={`/signup`} >Sign Up</Link>
             
                         </li>
                         

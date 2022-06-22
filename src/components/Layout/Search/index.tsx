@@ -19,13 +19,13 @@ const Search: FC = () => {
   return (
       <div className="container d-flex align-items-center justify-content-center">
         <div className="mb-5 mt-5 d-flex align-items-center search-style">
-            <p className="text-black search-text me-4">SEARCH</p>
+        <img className="me-4" src={lens} alt="lens" />
             <input 
               type="text" 
+              placeholder= "Search for a movie"
               className="form-control"
               onChange={handleChange} 
             />
-            <img className="ms-4" src={lens} alt="lens" />
         </div>
       </div>
   );
