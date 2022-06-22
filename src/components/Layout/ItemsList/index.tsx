@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import { FaFire } from 'react-icons/fa'
+
 import { Item } from "../../../types";
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -22,10 +24,10 @@ const ItemsList :FC<Props> = ({items}) =>{
 
     return(
       
-        <div className="container">
-            <div className="d-flex flex-row justify-content-between align-items-center " >
-                <h2>POPULAR MOVIES</h2>
-                <Link className= "" to={`/movies`}>VIEW ALL</Link>
+        <div className="container container-items-list">
+            <div className=" mt-5 d-flex flex-row justify-content-between align-items-center me-3">
+                <h2> <FaFire/> POPULAR MOVIES</h2>
+                <Link className= "view-all-btn" to={`/movies`}>VIEW ALL</Link>
             </div>
             <div className="row">
                     {items && items?.map((item) => {                       
@@ -33,7 +35,7 @@ const ItemsList :FC<Props> = ({items}) =>{
                         const imageBroken = (!item.poster_path)? "https://i.stack.imgur.com/6M513.png" : `http://image.tmdb.org/t/p/w500${item.poster_path}`
 
                         return (
-                            <div className="col-md-3 mb-5 mt-5 d-flex flex-column justify-content-center align-items-center">
+                            <div className="col-md-2 mb-5 mt-5 d-flex flex-column justify-content-center align-items-center">
                                 <div className="card each-card" key={item.id} onClick={
                                     () =>navegate(`/detail/${item.id}`)
                                     }>

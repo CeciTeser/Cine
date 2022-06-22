@@ -1,21 +1,32 @@
 @import '../../../scss/main.scss';
 
-.each-card{
-    height: 100%;
-    cursor: pointer;
-    border: none;
-    border-right: 1px solid rgb(225, 224, 224);
-    font-family: 'Barlow', sans-serif;
-
-
-    h5{
-
-        font-size: 1rem;
+.container-items-list{
+    margin-top: 5rem;
+   
+    .view-all-btn{
+        text-decoration: none;
+        color: black;
+        font-family: 'Barlow', sans-serif;
+        
     }
+    .view-all-btn:hover{
+        text-decoration: none;
+        color: rgb(198, 33, 33);
+        font-family: 'Barlow', sans-serif;
+        
+    }
+
+    .each-card{
+        height: 100%;
+        cursor: pointer;
+        border: none;
+        font-family: 'Barlow', sans-serif;
+        
+        h5{
+            font-size: 1rem;
+        }
     
-    // img{
-    //     height: 100%;
-    // }
+    }
 }
 
 
