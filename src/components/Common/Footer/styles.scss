@@ -33,8 +33,7 @@
                 }
         
                 a:hover{
-                    border-bottom: 0.5px solid red;
-                    color: $third-color;
+                    color: $primary-color;
                     border-radius: none;
                     font-weight: 600;
                 }
@@ -58,7 +57,7 @@
                     width: 100%;
                     border: none;
                     text-decoration: none;
-                    color: rgb(126, 126, 130);
+                    color:$fourth-color;
                     background-color: transparent;
                     font-size: 0.8rem;
                     letter-spacing: 1px;

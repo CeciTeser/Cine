@@ -6,7 +6,6 @@ export type Item = {
     release_date?: string;
     genre_ids?: number[];
     id: number ;
-    idDB: string;
     original_title?: string;
     original_language?: string;
     title: string;

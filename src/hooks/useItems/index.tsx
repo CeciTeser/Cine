@@ -22,6 +22,7 @@ type ItemsDetailStore = {
 };
 
 
+
 const useItems = () =>{
 
     const [page, setPage]= useState(1)
@@ -35,6 +36,14 @@ const useItems = () =>{
     const itemDetail = useSelector((state:ItemsDetailStore)=> state.itemDetail)
 
 
+    const starFilter =( value:number )=>{
+
+        const newArray = data.results
+        
+        return newArray?.filter (item => item.vote_average <= value)
+
+    }
+
     useEffect (()=>{
         dispatch(processItems({ page, search }))
     
@@ -42,7 +51,7 @@ const useItems = () =>{
 
 
 
-    return { data, page, setPage, search, setSearch, itemDetail}
+    return { data, page, setPage, search, setSearch, itemDetail, starFilter}
 
 }
 
