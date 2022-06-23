@@ -5,7 +5,7 @@
     font-family: 'Barlow', sans-serif;
 
     .vote{
-        color: red
+        color:$primary-color;
     }
 
     h3{
@@ -25,14 +25,13 @@ h2{
 .goback-btn{
     width: 8rem;
     height: 2rem;
-    background-color: white;
-    border: 1px solid red;
-    
-    
+    background-color: $fifth-color;
+    border:none;
+
 }
 
 .goback-btn:hover{
-    background-color: red;
-    color: white;
+
+    color:$primary-color;
     border: none;
 }

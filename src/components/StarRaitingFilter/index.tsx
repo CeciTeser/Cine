@@ -1,16 +1,17 @@
-import { FC, useState } from 'react';
+import { FC, useState, SetStateAction, Dispatch } from 'react';
 
 import { FaStar } from 'react-icons/fa'
 
 import './styles.scss'
 
 type Props ={
-    stars: number
+    stars: number,
+    raiting: number, 
+    setRaiting: Dispatch<SetStateAction<number>>,
 }
 
-const StarRatingFilter:FC <Props>  = ({ stars } ) =>{
-
-    const [raiting, setRaiting] = useState(0)
+const StarRatingFilter:FC <Props>  = ({ stars, raiting , setRaiting } ) =>{
+     
     const [hover, setHover] = useState(0)
 
 
@@ -26,23 +27,27 @@ const StarRatingFilter:FC <Props>  = ({ stars } ) =>{
                     const ratingValue = i + 1; 
                 
                     return (
-                        <label>
-                            <input 
-                                type="radio" 
-                                name="rating" 
-                                value={ratingValue} 
-                                onClick={()=>setRaiting(ratingValue)} 
-                            />
-                            <FaStar 
-                                className="star" 
-                                color={ratingValue<= (hover || raiting)? '#ffc107': '#e4e5e9'} 
-                                size={30} 
-                                onMouseEnter={()=>setHover(ratingValue)}
-                                onMouseOut={()=>setHover(0)}
-                            />
-                        </label>
+
+                            <label>
+                                <input 
+                                    type="radio" 
+                                    name="rating" 
+                                    value={ratingValue} 
+                                    onClick={()=>setRaiting(ratingValue)} 
+                                
+                                />
+                                <FaStar 
+                                    className="star" 
+                                    color={ratingValue <= (hover || raiting)? '#ffc107': '#e4e5e9'} 
+                                    size={30} 
+                                    onMouseEnter={()=>setHover(ratingValue)}
+                                    onMouseOut={()=>setHover(0)}
+                                />
+                            </label>
+                            
                     )
                 })}
+                <button onClick={()=>setRaiting(0)} >Restore star filter</button>
             </div>
         </div>
     );

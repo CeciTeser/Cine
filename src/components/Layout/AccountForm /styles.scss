@@ -1,0 +1,115 @@
+@import '../../../scss/main.scss';
+
+.account{
+  margin: 15px 0px;
+  display: flex;
+  background-image: linear-gradient(rgba(34, 34, 34, 0.8) 100%,rgba(53, 53, 53, 0.5) 0),url("../../../assets/img/characters.jpg");
+    
+    .account-box{
+      width: 80%;
+      height: 30rem;
+      display: flex;
+      flex-direction: row;
+      padding-top: 5rem;
+
+      .account-left-col{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color:white;
+        font-family: 'Barlow', sans-serif;
+        p{
+          width: 360px;
+
+        }
+        ul{
+          width: 360px;
+
+        }
+      }
+      .account-right-col{
+        height: 100%;
+        
+        form{
+
+            h2{
+              color: $fifth-color;
+            }
+        
+            input{
+              border-radius: 5px;
+              border:none
+            }
+            .firstname{
+              width: 13rem;
+              height: 2.5rem;
+              margin-right: 1rem;
+              margin-top: 1rem;
+            }
+            .lastname{
+              width: 13rem;
+              height: 2.5rem;
+              margin-top: 1rem;
+            }
+            .email{
+              width: 27rem;
+              height: 2.5rem;
+              margin-top: 1rem;
+            }
+            .password{
+              width: 27rem;
+              height: 2.5rem;
+              margin-top: 1rem;
+            }
+        
+      
+          .account-login{
+            width: 100%;
+            height: 4rem;
+            margin-top: 3rem;
+      
+            button{
+              width: 10rem;
+              height: 3rem;
+              background-color: $primary-color;
+              border: none;
+              border-radius: 3px;
+              color: $fifth-color;
+              margin-right: 2rem;
+            }
+      
+            button:hover{
+              background-color: $fifth-color;
+              color: $primary-color;
+            }
+      
+            a{
+              border: none;
+              text-decoration: none;
+              color: $fifth-color;
+              margin: 0;
+              padding:0;
+              
+              letter-spacing: 1px;
+            }
+        
+            a:hover{
+                color:$primary-color;
+                font-weight: 600;
+            }
+            p{
+              margin: 0;
+              padding:0;
+              color: $fifth-color;
+            }
+          }
+    
+      }
+
+      }
+
+    }
+
+}
+
+

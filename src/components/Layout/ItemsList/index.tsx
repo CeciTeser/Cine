@@ -13,8 +13,7 @@ import './styles.scss';
 
 
 type Props={
-    items:Item[], 
-       
+    items?:Item[]  , 
 }
 
 const ItemsList :FC<Props> = ({items}) =>{
@@ -35,8 +34,8 @@ const ItemsList :FC<Props> = ({items}) =>{
                         const imageBroken = (!item.poster_path)? "https://i.stack.imgur.com/6M513.png" : `http://image.tmdb.org/t/p/w500${item.poster_path}`
 
                         return (
-                            <div className="col-md-2 mb-5 mt-5 d-flex flex-column justify-content-center align-items-center">
-                                <div className="card each-card" key={item.id} onClick={
+                            <div className="col-md-2 mb-5 mt-5 d-flex flex-column justify-content-center align-items-center" key={item.id}>
+                                <div className="card each-card" onClick={
                                     () =>navegate(`/detail/${item.id}`)
                                     }>
                                     <div className="card-body d-flex flex-column justify-content-center align-items-center">
