@@ -24,7 +24,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/home" element={<Dashboard />}/>
+        <Route path="/" element={<Dashboard />}/>
         <Route path="/detail/:idItem" element={<CardDetailPage />}/>
         <Route path="/login" element={<LoginPage />}/>
         <Route path="/signup" element={<SignUpPage />}/>

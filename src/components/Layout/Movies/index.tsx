@@ -26,7 +26,7 @@ const Movies :FC<Props> = ({items}) =>{
       
         <div className="container">
              <div className="home" >
-                <Link className= "home-link" to={`/home`}><i className="fas fa-chevron-left pe-2"></i>Home</Link>
+                <Link className= "home-link" to={`/`}><i className="fas fa-chevron-left pe-2"></i>Home</Link>
             </div>
             <div className="row">
                     {items && items?.map((item) => {                       
